@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hatnames-dev-164552-authRole",
+      "UnauthRoleArn": "arn:aws:iam::120215488981:role/amplify-hatnames-dev-164552-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::120215488981:role/amplify-hatnames-dev-164552-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-hatnames-dev-164552-deployment",
+      "UnauthRoleName": "amplify-hatnames-dev-164552-unauthRole",
+      "StackName": "amplify-hatnames-dev-164552",
+      "StackId": "arn:aws:cloudformation:eu-west-1:120215488981:stack/amplify-hatnames-dev-164552/8c6f1e10-ef86-11ea-b35a-02dbc193ed28",
+      "AmplifyAppId": "d1takiklus4rpj"
+    }
+  }
+}
