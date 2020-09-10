@@ -1,8 +1,8 @@
 {
-  "identityPoolName": "hatnames0fd520e4_identitypool_0fd520e4",
+  "identityPoolName": "hatnames0a3a00a3_identitypool_0a3a00a3",
   "allowUnauthenticatedIdentities": false,
-  "resourceNameTruncated": "hatnam0fd520e4",
-  "userPoolName": "hatnames0fd520e4_userpool_0fd520e4",
+  "resourceNameTruncated": "hatnam0a3a00a3",
+  "userPoolName": "hatnames0a3a00a3_userpool_0a3a00a3",
   "autoVerifiedAttributes": ["email"],
   "mfaConfiguration": "OFF",
   "mfaTypes": ["SMS Text Message"],
@@ -18,10 +18,10 @@
   "userpoolClientRefreshTokenValidity": 30,
   "userpoolClientWriteAttributes": ["email"],
   "userpoolClientReadAttributes": ["email"],
-  "userpoolClientLambdaRole": "hatnam0fd520e4_userpoolclient_lambda_role",
+  "userpoolClientLambdaRole": "hatnam0a3a00a3_userpoolclient_lambda_role",
   "userpoolClientSetAttributes": false,
-  "sharedId": "0fd520e4",
-  "resourceName": "hatnames0fd520e4",
+  "sharedId": "0a3a00a3",
+  "resourceName": "hatnames0a3a00a3",
   "authSelections": "identityPoolAndUserPool",
   "authRoleArn": {
     "Fn::GetAtt": ["AuthRole", "Arn"]

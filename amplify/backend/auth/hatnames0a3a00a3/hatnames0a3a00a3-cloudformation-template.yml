@@ -104,8 +104,8 @@ Resources:
       RoleName:
         !If [
           ShouldNotCreateEnvResources,
-          'hatnam0fd520e4_sns-role',
-          !Join ['', ['sns', '0fd520e4', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]],
+          'hatnam0a3a00a3_sns-role',
+          !Join ['', ['sns', '0a3a00a3', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]],
         ]
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
@@ -118,9 +118,9 @@ Resources:
               - 'sts:AssumeRole'
             Condition:
               StringEquals:
-                sts:ExternalId: hatnam0fd520e4_role_external_id
+                sts:ExternalId: hatnam0a3a00a3_role_external_id
       Policies:
-        - PolicyName: hatnam0fd520e4-sns-policy
+        - PolicyName: hatnam0a3a00a3-sns-policy
           PolicyDocument:
             Version: '2012-10-17'
             Statement:
@@ -159,14 +159,14 @@ Resources:
       SmsVerificationMessage: !Ref smsVerificationMessage
       SmsConfiguration:
         SnsCallerArn: !GetAtt SNSRole.Arn
-        ExternalId: hatnam0fd520e4_role_external_id
+        ExternalId: hatnam0a3a00a3_role_external_id
 
   UserPoolClientWeb:
     # Created provide application access to user pool
     # Depends on UserPool for ID reference
     Type: 'AWS::Cognito::UserPoolClient'
     Properties:
-      ClientName: hatnam0fd520e4_app_clientWeb
+      ClientName: hatnam0a3a00a3_app_clientWeb
 
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
       UserPoolId: !Ref UserPool
@@ -176,7 +176,7 @@ Resources:
     # Depends on UserPool for ID reference
     Type: 'AWS::Cognito::UserPoolClient'
     Properties:
-      ClientName: hatnam0fd520e4_app_client
+      ClientName: hatnam0a3a00a3_app_client
 
       GenerateSecret: !Ref userpoolClientGenerateSecret
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
@@ -193,7 +193,7 @@ Resources:
           !Ref userpoolClientLambdaRole,
           !Join [
             '',
-            ['upClientLambdaRole', '0fd520e4', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env],
+            ['upClientLambdaRole', '0a3a00a3', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env],
           ],
         ]
       AssumeRolePolicyDocument:
@@ -249,7 +249,7 @@ Resources:
     # Marked as depending on UserPoolClientRole for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: hatnam0fd520e4_userpoolclient_lambda_iam_policy
+      PolicyName: hatnam0a3a00a3_userpoolclient_lambda_iam_policy
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -266,7 +266,7 @@ Resources:
     # Marked as depending on UserPoolClientLambdaPolicy for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: hatnam0fd520e4_userpoolclient_lambda_log_policy
+      PolicyName: hatnam0a3a00a3_userpoolclient_lambda_log_policy
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -302,8 +302,8 @@ Resources:
       IdentityPoolName:
         !If [
           ShouldNotCreateEnvResources,
-          'hatnames0fd520e4_identitypool_0fd520e4',
-          !Join ['', ['hatnames0fd520e4_identitypool_0fd520e4', '__', !Ref env]],
+          'hatnames0a3a00a3_identitypool_0a3a00a3',
+          !Join ['', ['hatnames0a3a00a3_identitypool_0a3a00a3', '__', !Ref env]],
         ]
 
       CognitoIdentityProviders:
