@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { withAuthenticator } from 'aws-amplify-react-native'
+import Amplify, { withAuthenticator } from 'aws-amplify-react-native'
+// @ts-expect-error aws exports has no typing
+import awsconfig from './aws-exports.js'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,6 +20,8 @@ const styles = StyleSheet.create({
     fontSize: 100,
   },
 })
+
+Amplify.configure(awsconfig)
 
 function App(): JSX.Element {
   return (
