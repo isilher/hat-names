@@ -29,4 +29,4 @@ function App(): JSX.Element {
   )
 }
 
-export default withAuthenticator(App, true)
+export default withAuthenticator(App, { signUpConfig: { hiddenDefaults: ['phone_number'] } })

@@ -1,6 +1,4 @@
 {
-  "identityPoolName": "hatnames0a3a00a3_identitypool_0a3a00a3",
-  "allowUnauthenticatedIdentities": false,
   "resourceNameTruncated": "hatnam0a3a00a3",
   "userPoolName": "hatnames0a3a00a3_userpool_0a3a00a3",
   "autoVerifiedAttributes": ["email"],
@@ -22,15 +20,23 @@
   "userpoolClientSetAttributes": false,
   "sharedId": "0a3a00a3",
   "resourceName": "hatnames0a3a00a3",
-  "authSelections": "identityPoolAndUserPool",
+  "authSelections": "userPoolOnly",
   "authRoleArn": {
     "Fn::GetAtt": ["AuthRole", "Arn"]
   },
   "unauthRoleArn": {
     "Fn::GetAtt": ["UnauthRole", "Arn"]
   },
-  "useDefault": "default",
-  "userPoolGroupList": [],
+  "useDefault": "manual",
+  "userPoolGroupList": ["hatnamesplayers"],
   "serviceName": "Cognito",
-  "dependsOn": []
+  "dependsOn": [],
+  "userPoolGroups": true,
+  "adminQueries": false,
+  "triggers": "{}",
+  "hostedUI": false,
+  "parentStack": {
+    "Ref": "AWS::StackId"
+  },
+  "permissions": []
 }

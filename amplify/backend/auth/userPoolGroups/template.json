@@ -1,0 +1,50 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": {
+    "authhatnames0a3a00a3UserPoolId": {
+      "Type": "String",
+      "Default": "authhatnames0a3a00a3UserPoolId"
+    },
+
+    "authhatnames0a3a00a3AppClientID": {
+      "Type": "String",
+      "Default": "authhatnames0a3a00a3AppClientID"
+    },
+    "authhatnames0a3a00a3AppClientIDWeb": {
+      "Type": "String",
+      "Default": "authhatnames0a3a00a3AppClientIDWeb"
+    },
+    "AuthRoleArn": {
+      "Type": "String"
+    },
+    "UnauthRoleArn": {
+      "Type": "String"
+    },
+    "env": {
+      "Type": "String"
+    }
+  },
+  "Conditions": {
+    "ShouldNotCreateEnvResources": {
+      "Fn::Equals": [
+        {
+          "Ref": "env"
+        },
+        "NONE"
+      ]
+    }
+  },
+  "Resources": {
+    "hatnamesplayersGroup": {
+      "Type": "AWS::Cognito::UserPoolGroup",
+      "Properties": {
+        "GroupName": "hatnamesplayers",
+        "Precedence": 1,
+
+        "UserPoolId": {
+          "Ref": "authhatnames0a3a00a3UserPoolId"
+        }
+      }
+    }
+  }
+}
