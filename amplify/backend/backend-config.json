@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "hatnames0fd520e4": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

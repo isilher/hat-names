@@ -10,6 +10,11 @@
       "StackName": "amplify-hatnames-dev-164552",
       "StackId": "arn:aws:cloudformation:eu-west-1:120215488981:stack/amplify-hatnames-dev-164552/8c6f1e10-ef86-11ea-b35a-02dbc193ed28",
       "AmplifyAppId": "d1takiklus4rpj"
+    },
+    "categories": {
+      "auth": {
+        "hatnames0fd520e4": {}
+      }
     }
   }
 }
