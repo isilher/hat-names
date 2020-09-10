@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import { withAuthenticator } from 'aws-amplify-react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +24,6 @@ function App(): JSX.Element {
     <View style={styles.container}>
       <Text style={styles.hat}>🎩</Text>
       <Text style={styles.title}>Hat Names</Text>
-      <AmplifySignOut />
       <StatusBar style='auto' />
     </View>
   )
