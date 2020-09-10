@@ -10,6 +10,7 @@
     "lint:fix": "prettier --write . && eslint . --fix"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^0.2.18",
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
     "react": "~16.11.0",
