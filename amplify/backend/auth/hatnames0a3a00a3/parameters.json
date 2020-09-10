@@ -31,7 +31,7 @@
   "userPoolGroupList": ["hatnamesplayers"],
   "serviceName": "Cognito",
   "dependsOn": [],
-  "userPoolGroups": true,
+  "userPoolGroups": false,
   "adminQueries": false,
   "triggers": "{}",
   "hostedUI": false,
